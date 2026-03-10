@@ -1,21 +1,20 @@
 import "./App.css";
+import{useState} from "react";
 
 export default function App() {
-  const count = 0;
+  const [count, setCount] = useState(0); //create a piece of state initialized to 0, return array with 2 items
+  //when setCount called, stores new value & re-runs component function with updated value
 
   function increment(){
-    count = count + 1;
-    console.log("count is now:", count);
+    setCount(count + 1);
   }
 
   function decrement(){
-    count = count - 1;
-    console.log("count is now:", count);
+    setCount(count - 1);
   }
 
   function reset(){
-    count = 0;
-    console.log("count is now:", count);
+    setCount(0);
   }
 
   return (
