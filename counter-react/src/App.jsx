@@ -1,7 +1,14 @@
+import "./App.css";
+
 export default function App() {
+  const count = 0;
+
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className="counter">
+      <h1>Count: {count}</h1>
+      <button>+</button>
+      <button>&minus;</button>
+      <button>Reset</button>
     </div>
   );
 }
