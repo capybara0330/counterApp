@@ -2,28 +2,21 @@ import "./styles.css";
 
 const app = document.getElementById("app");
 
-// Create elements
-const container = document.createElement("div");
-container.className = "counter";
+// Set up the layout using innerHTML
+app.innerHTML = `
+  <div class="counter">
+    <h1 id="display">Count: 0</h1>
+    <button id="increment">+</button>
+    <button id="decrement">&minus;</button>
+    <button id="reset">Reset</button>
+  </div>
+`;
 
-const display = document.createElement("h1");
-display.textContent = "Count: 0";
-
-const incrementBtn = document.createElement("button");
-incrementBtn.textContent = "+";
-
-const decrementBtn = document.createElement("button");
-decrementBtn.textContent = "−";
-
-const resetBtn = document.createElement("button");
-resetBtn.textContent = "Reset";
-
-// Assemble the tree
-container.appendChild(display);
-container.appendChild(incrementBtn);
-container.appendChild(decrementBtn);
-container.appendChild(resetBtn);
-app.appendChild(container);
+// Get references to elements
+const display = document.getElementById("display");
+const incrementBtn = document.getElementById("increment");
+const decrementBtn = document.getElementById("decrement");
+const resetBtn = document.getElementById("reset");
 
 // State and update function
 let count = 0;
